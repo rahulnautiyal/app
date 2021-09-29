@@ -15,6 +15,24 @@ public abstract class Vehicle {
     public Vehicle() {
     }
 
+    public int getNoOfPassengers() {
+        return noOfPassengers;
+    }
+
+    public void setNoOfPassengers(int noOfPassengers) {
+        this.noOfPassengers = noOfPassengers;
+    }
+
+    public int getMaxLimit() {
+        return maxLimit;
+    }
+
+    public void setMaxLimit(int maxLimit) {
+        this.maxLimit = maxLimit;
+    }
+
+
+
     public double calculateTotalExpenseForTrip(String vehicle, String engine, String actype, String trip, String passengerscount) throws InvalidDistanceException {
         this.noOfPassengers = Integer.parseInt(passengerscount);
         rate = new Rate(engine, isAC(actype));
